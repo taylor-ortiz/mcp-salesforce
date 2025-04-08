@@ -31,8 +31,11 @@ The system performs the following tasks:
 
 - **Python 3.8+** (using a virtual environment is recommended)
 - **Fast MCP** – for constructing the multi-turn conversation and prompt tools
+   - https://github.com/jlowin/fastmcp
 - **Simple Salesforce** – for connecting to and querying Salesforce
-- **OpenAI Python Library** – for integration with your LLM (or your preferred LLM client)
+   - https://pypi.org/project/simple-salesforce/
+- **OpenAI Responses API** – for integration with your LLM (or your preferred LLM client)
+   - https://platform.openai.com/docs/api-reference/responses
 
 ### Installation
 
