@@ -1,4 +1,4 @@
 # mcp-salesforce
 
-https://github.com/user-attachments/assets/9606210e-9e34-4481-ae57-c659c6c2c855
+https://github.com/user-attachments/assets/7e610150-b62e-4336-aa97-e241416e0567
 
