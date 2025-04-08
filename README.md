@@ -1,8 +1,8 @@
 https://github.com/user-attachments/assets/7e610150-b62e-4336-aa97-e241416e0567
 
-# Salesforce MCP Query Generator
+# Salesforce MCP Query With Natural Language
 
-This project implements a multi-turn conversation system using **Fast MCP (Model Context Protocol)**, **Simple Salesforce**, and an LLM (via the OpenAI API). Its goal is to dynamically generate valid SOQL queries based on user input and Salesforce object metadata. In addition, the system can ask clarifying questions when the input is ambiguous and summarize query results for user-friendly output.
+This project implements a multi-turn conversation system using **Fast MCP (Model Context Protocol)**, **Simple Salesforce**, and an LLM (via the OpenAI API). Its goal is to dynamically generate valid SOQL queries based on natural language from the user input and Salesforce object metadata. In addition, the system can ask clarifying questions when the input is ambiguous and summarize query results for user-friendly output.
 
 ## Overview
 
@@ -49,28 +49,35 @@ The system performs the following tasks:
    # For Windows: venv\Scripts\activate
 
 3. **Install Dependencies**
-    pip install fastmcp simple-salesforce openai
+   ```bash
+   pip install fastmcp simple-salesforce openai
 
-4. **Configure Credentials**
+4. **Create Connected App in Salesforce**
+
+   - Create a connected app and give whatever scope of authorization you want this app to have
+   - Take note of the secret and key
+
+5. **Configure Credentials**
+
+    - create a .env file and use environment variables to provide these credentials securely.
 
     - Update your Salesforce credentials (username, password, consumer key, consumer secret) in your code.
 
     - Replace the OpenAI API key with your actual key.
 
-    - Alternatively, use environment variables to provide these credentials securely.
-
 ### Running the MCP Server
 
 For testing, you can call the MCP tool directly in your script. For multi-turn conversation mode, uncomment the MCP server run line in your code. For example:
 
-    ```python
-    if __name__ == "__main__":
-        # Uncomment the next line to run the MCP server:
-        # mcp.run(transport="stdio")
-        
-        # For testing purposes, we call the query tool directly:
-        query('show me all of my cases that are still open')
-    ```
+```python
+  if __name__ == "__main__":
+      # Uncomment the next line to run the MCP server:
+      # mcp.run(transport="stdio")
+      
+      # For testing purposes, we call the query tool directly:
+      query('show me all of my cases that are still open')
+```
+    
 ## Code Structure
 
 ### Salesforce Connection & Metadata
