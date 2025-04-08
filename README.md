@@ -80,7 +80,10 @@ For testing, you can call the MCP tool directly in your script. For multi-turn c
       # For testing purposes, we call the query tool directly:
       query('show me all of my cases that are still open')
 ```
-    
+Here is what it looks like in the terminal when running a test query:
+
+![Screenshot 2025-04-08 at 6 40 32 AM](https://github.com/user-attachments/assets/dbc40d1a-c73a-490b-951f-730f783d6cdc)
+
 ## Code Structure
 
 ### Salesforce Connection & Metadata
